@@ -1,0 +1,17 @@
+```
+Benchmark             (sample)  Mode  Cnt  Score   Error  Units
+MainBenchmark.main     vanilla    ss   10  6.243 ± 0.481   s/op
+MainBenchmark.main    explicit    ss   10  6.236 ± 0.136   s/op
+MainBenchmark.main  exclusions    ss   10  6.149 ± 0.167   s/op
+MainBenchmark.main   unmatched    ss   10  6.151 ± 0.318   s/op
+```
+
+|===
+| Sample | Main Class | beans | classes
+
+| vanilla    | Application                               |367 | 6933
+| imports    | ExplicitImportsApplication                |367 | 6991
+| explicit   | ExplicitExclusionsApplication             |367 | 6935
+| unmatched  | ExplicitImportWithoutUnmatchedApplication |358 | 6282
+
+|===
